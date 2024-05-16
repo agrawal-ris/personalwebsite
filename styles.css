@@ -1,11 +1,21 @@
+@font-face {
+    font-family: 'cr'; 
+    src: url('resources/cr.ttf');
+}
+
+@font-face {
+    font-family: 'cr2'; 
+    src: url('resources/cr2.ttf');
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 700px;
+    margin: 50px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -45,8 +55,14 @@ button:hover {
     font-size: 18px;
 }
 
-@font-face {
-    font-family: 'cr'; /* Replace 'YourCustomFont' with your desired font family name */
-    src: url('resources/cr.ttf') format('ttf'); /* Update the path if your font file is in a different location */
-    /* Add more src declarations for different font formats if needed */
+.new-font {
+    font-family: 'cr2';
+    font-size: xx-large;
+}
+
+.new-font-2 {
+    font-family: 'cr2';
+    transform: rotate(180deg);
+    font-size: xx-large;
+    float: left;
 }
