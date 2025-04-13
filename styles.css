@@ -1,68 +1,123 @@
+/* Font Imports */
 @font-face {
-    font-family: 'cr'; 
-    src: url('resources/cr.ttf');
+  font-family: 'cr';
+  src: url('resources/cr.ttf');
 }
 
 @font-face {
-    font-family: 'cr2'; 
-    src: url('resources/cr2.ttf');
+  font-family: 'cr2';
+  src: url('resources/cr2.ttf');
 }
 
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
+/* Container */
 .container {
-    max-width: 700px;
-    margin: 50px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+/* Heading */
 h1 {
-    text-align: center;
-    color: #333;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
+/* Input Field */
 input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
+/* Button */
 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-#outputText {
-    margin-top: 20px;
-    font-size: 18px;
+/* Output Styles */
+#outputText,
+#outputText2 {
+  margin-top: 20px;
+  word-wrap: break-word;
 }
 
 .new-font {
-    font-family: 'cr2';
-    font-size: xx-large;
+  font-family: 'cr2';
+  font-size: 6rem; /* BIG font */
+  font-weight: bold;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .new-font-2 {
-    font-family: 'cr2';
-    transform: rotate(180deg);
-    font-size: xx-large;
-    float: left;
+  font-family: 'cr2';
+  transform: rotate(180deg);
+  font-size: 6rem; /* BIG font */
+  font-weight: bold;
+  line-height: 1.2;
+  word-break: break-word;
+  display: block;
+  margin-top: 20px;
+}
+
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ✅ Responsive Media Query */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .new-font,
+  .new-font-2 {
+    font-size: 1.8rem;
+  }
 }

@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font Converter</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Font Converter</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Font Converter</h1>
-        <input type="text" id="inputText" placeholder="Enter your text...">
-        <button onclick="convertText()">Convert</button>
-        <div id="outputText" class="new-font"></div>
-        <div id="outputText2" class="new-font-2"></div>
-    </div>
+  <div class="container">
+    <h1>Font Converter</h1>
 
-    <script src="script.js"></script>
+    <input
+      type="text"
+      id="inputText"
+      placeholder="Enter your text..."
+      aria-label="Input text for conversion"
+    />
+
+    <button id="convertBtn">Convert</button>
+
+    <div id="outputText" class="new-font"></div>
+    <hr class="divider" />
+    <div id="outputText2" class="new-font-2"></div>
+  </div>
+
+  <script>
+    function convertText() {
+      const input = document.getElementById('inputText').value;
+      document.getElementById('outputText').textContent = input;
+      document.getElementById('outputText2').textContent = input;
+    }
+
+    document.getElementById('convertBtn').addEventListener('click', convertText);
+  </script>
 </body>
 </html>
